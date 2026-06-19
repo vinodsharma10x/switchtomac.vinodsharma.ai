@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --line-2: #d5dae2;
+  --faint: #9aa0ac;
+  --muted: #6e747f;
+  --ink: #14161b;
+  --accent: #2f6bff;
+  --accent-ink: #1b4ed1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bg text-ink font-sans antialiased;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+::selection {
+  background: #ebf1ff;
+}
+
+/* ----------------------------------------------------------------
+   Keycaps — the signature element. Tactile, dimensional keys.
+   ---------------------------------------------------------------- */
+.kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2em;
+  height: 2em;
+  padding: 0 0.5em;
+  font-family: var(--font-mono), "SF Mono", "Segoe UI Symbol", ui-monospace, monospace;
+  font-weight: 500;
+  font-size: 0.92rem;
+  line-height: 1;
+  color: #2a2f38;
+  background: linear-gradient(180deg, #ffffff 0%, #f1f3f7 100%);
+  border: 1px solid var(--line-2);
+  border-radius: 9px;
+  box-shadow: 0 1.5px 0 #bfc6d1, 0 2px 4px rgba(20, 22, 27, 0.1), inset 0 1px 0 #ffffff;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+.kbd.gl {
+  font-size: 1.04rem;
+}
+.kbd--mac {
+  color: var(--ink);
+  border-color: #bcceff;
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5ff 100%);
+  box-shadow: 0 1.5px 0 #9fb7ff, 0 2px 5px rgba(47, 107, 255, 0.16), inset 0 1px 0 #ffffff;
+}
+.kbd--lg {
+  min-width: 2.5em;
+  height: 2.5em;
+  font-size: 1.12rem;
+}
+.kbd--lg.gl {
+  font-size: 1.32rem;
+}
+.ksep {
+  color: var(--faint);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.85em;
+  padding: 0 1px;
+}
+.kword {
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  padding: 0 1px;
+}
+.phrase {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.92rem;
+}
+.phrase.win {
+  color: var(--faint);
+}
+
+/* press feedback when hovering a shortcut row */
+.row-hover:hover .keys-mac .kbd--mac {
+  transform: translateY(1.5px);
+  box-shadow: 0 0 0 #9fb7ff, 0 1px 2px rgba(47, 107, 255, 0.16), inset 0 1px 0 #fff;
+}
+
+/* ----------------------------------------------------------------
+   Hero translator animations
+   ---------------------------------------------------------------- */
+@keyframes trFade {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-fade {
+  animation: trFade 0.42s cubic-bezier(0.2, 0.9, 0.3, 1) both;
+}
+
+@keyframes keyPress {
+  0% {
+    transform: translateY(-3px);
+  }
+  55% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: none;
+  }
+}
+.animate-press .kbd--mac {
+  animation: keyPress 0.5s ease both;
+}
+
+/* hide scrollbars on the category pill rail */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
