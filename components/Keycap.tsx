@@ -64,5 +64,9 @@ export function KeyCombo({
     }
   });
 
-  return <span className="inline-flex flex-wrap items-center gap-1.5">{out}</span>;
+  return (
+    <span className={`inline-flex flex-wrap items-center gap-1.5${mac ? " keys-mac" : ""}`}>
+      {out}
+    </span>
+  );
 }

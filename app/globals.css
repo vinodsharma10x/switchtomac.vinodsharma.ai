@@ -87,8 +87,9 @@ body {
   color: var(--faint);
 }
 
-/* press feedback when hovering a shortcut row */
-.row-hover:hover .keys-mac .kbd--mac {
+/* press feedback when hovering a shortcut row, or any Mac key combo on the page */
+.row-hover:hover .keys-mac .kbd--mac,
+.keys-mac:hover .kbd--mac {
   transform: translateY(1.5px);
   box-shadow: 0 0 0 #9fb7ff, 0 1px 2px rgba(47, 107, 255, 0.16), inset 0 1px 0 #fff;
 }
