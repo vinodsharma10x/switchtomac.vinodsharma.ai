@@ -49,6 +49,12 @@ body {
   background: rgb(var(--accent-weak));
 }
 
+/* The trackpad illustration surface, theme-aware. */
+.tp-pad {
+  fill: rgb(var(--surface));
+  stroke: rgb(var(--line-2));
+}
+
 /* ----------------------------------------------------------------
    Keycaps — the signature element. Tactile, dimensional keys.
    ---------------------------------------------------------------- */

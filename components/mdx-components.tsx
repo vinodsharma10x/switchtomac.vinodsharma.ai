@@ -3,6 +3,8 @@ import Link from "next/link";
 import { KeyCombo } from "@/components/Keycap";
 import TaskCard from "@/components/TaskCard";
 import YouTube from "@/components/YouTube";
+import GesturesGrid from "@/components/GesturesGrid";
+import EverydayGuides from "@/components/EverydayGuides";
 
 // A simple callout box usable in posts: <Callout>…</Callout>
 function Callout({ children, type = "tip" }: { children: React.ReactNode; type?: string }) {
@@ -67,4 +69,6 @@ export const mdxComponents = {
   TaskCard,
   YouTube,
   Callout,
+  GesturesGrid,
+  EverydayGuides,
 };
