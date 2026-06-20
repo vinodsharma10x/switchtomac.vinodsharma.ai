@@ -4,6 +4,7 @@ import { Space_Grotesk, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { GtmScript, GtmNoScript } from "@/components/GoogleTagManager";
+import ConsentBanner from "@/components/ConsentBanner";
 import { SITE } from "@/lib/site";
 
 const display = Space_Grotesk({
@@ -91,6 +92,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <ConsentBanner />
       </body>
     </html>
   );
