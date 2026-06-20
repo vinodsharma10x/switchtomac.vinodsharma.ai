@@ -5,7 +5,7 @@ import { getAllPosts, formatDate } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Blog: tips for new Mac users",
   description:
-    "Longer reads and practical tips for getting comfortable on macOS after years on Windows.",
+    "Short, practical answers to the everyday Mac questions that come up after years on Windows.",
 };
 
 export default function BlogPage() {
@@ -18,10 +18,10 @@ export default function BlogPage() {
           Blog
         </span>
         <h1 className="mt-2 font-display text-[clamp(28px,4.5vw,40px)] font-bold tracking-[-0.025em]">
-          Reads &amp; tips
+          Notes &amp; tips
         </h1>
         <p className="mt-3 max-w-[60ch] text-[16px] text-ink-2">
-          Longer pieces on getting comfortable with macOS, written for people coming from
+          Bite-sized answers to the everyday Mac questions you'll have after years on
           Windows.
         </p>
       </header>
