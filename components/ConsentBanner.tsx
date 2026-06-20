@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
@@ -58,7 +59,11 @@ export default function ConsentBanner() {
       <div className="mx-auto flex max-w-content flex-col gap-3 rounded-2xl border border-line bg-surface p-4 shadow-card sm:flex-row sm:items-center sm:justify-between">
         <p className="text-[13.5px] leading-relaxed text-ink-2">
           This site uses cookies to understand traffic and improve the guides. In the
-          EU, analytics stays off until you accept.
+          EU, analytics stays off until you accept. See the{" "}
+          <Link href="/privacy" className="underline underline-offset-2 hover:text-accent-ink">
+            Privacy Policy
+          </Link>
+          .
         </p>
         <div className="flex flex-none gap-2">
           <button

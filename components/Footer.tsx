@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SITE } from "@/lib/site";
 
 export default function Footer() {
@@ -38,6 +39,14 @@ export default function Footer() {
             </a>
             . Open source under the MIT License.
           </span>
+          <nav className="flex gap-4">
+            <Link href="/privacy" className="hover:text-accent-ink">
+              Privacy
+            </Link>
+            <Link href="/terms" className="hover:text-accent-ink">
+              Terms
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>
