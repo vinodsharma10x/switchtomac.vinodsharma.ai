@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
 import { getPost, getAllSlugs, formatDate } from "@/lib/blog";
 import { mdxComponents } from "@/components/mdx-components";
 import JsonLd from "@/components/JsonLd";
@@ -85,7 +86,10 @@ export default function PostPage({ params }: { params: { slug: string } }) {
         <MDXRemote
           source={post.content}
           components={mdxComponents}
-          options={{ blockJS: false, mdxOptions: { remarkPlugins: [remarkGfm] } }}
+          options={{
+            blockJS: false,
+            mdxOptions: { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug] },
+          }}
         />
       </div>
 
