@@ -38,7 +38,8 @@ export default function PostPage({ params }: { params: { slug: string } }) {
   if (!post) notFound();
 
   return (
-    <article className="mx-auto max-w-[720px] px-5 py-12 sm:px-6 sm:py-16">
+    <div className="mx-auto max-w-content px-5 py-12 sm:px-6 sm:py-16">
+      <article className="max-w-[720px]">
       <JsonLd
         data={[
           blogPostingLd(post),
@@ -85,6 +86,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
           options={{ blockJS: false }}
         />
       </div>
-    </article>
+      </article>
+    </div>
   );
 }
