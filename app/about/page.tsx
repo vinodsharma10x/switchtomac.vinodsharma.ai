@@ -9,7 +9,8 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-[720px] px-5 py-12 sm:px-6 sm:py-16">
+    <div className="mx-auto max-w-content px-5 py-12 sm:px-6 sm:py-16">
+      <div className="max-w-[720px]">
       <span className="font-mono text-[12.5px] uppercase tracking-[0.14em] text-muted">
         About
       </span>
@@ -164,6 +165,7 @@ export default function AboutPage() {
           Vinod Sharma
         </a>
       </p>
+      </div>
     </div>
   );
 }
