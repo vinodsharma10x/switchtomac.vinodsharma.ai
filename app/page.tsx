@@ -33,11 +33,11 @@ export default function Home() {
 
       <section id="gestures" className="mx-auto max-w-content px-5 pb-16 sm:px-6">
         <h2 className="font-display text-[clamp(28px,4.5vw,40px)] font-bold tracking-[-0.025em]">
-          The trackpad gestures to learn first
+          The trackpad gestures
         </h2>
         <p className="mt-3 max-w-[60ch] text-[16px] text-ink-2">
-          The Mac trackpad does what a mouse cannot. Learn these ten and it becomes the
-          thing you miss most the moment you are back on a Windows laptop.
+          The Mac trackpad is very powerful and user friendly. Start using it with these
+          ten gestures.
         </p>
         <div className="mt-8">
           <GesturesGrid />
