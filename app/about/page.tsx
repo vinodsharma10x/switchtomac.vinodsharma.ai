@@ -71,7 +71,15 @@ export default function AboutPage() {
       </div>
 
       <p className="mt-12 font-mono text-[12.5px] tracking-wide text-faint">
-        © 2026 Vinod Sharma
+        A website by{" "}
+        <a
+          href="https://vinodsharma.ai/"
+          target="_blank"
+          rel="noreferrer"
+          className="underline underline-offset-2 hover:text-accent-ink"
+        >
+          Vinod Sharma
+        </a>
       </p>
     </div>
   );

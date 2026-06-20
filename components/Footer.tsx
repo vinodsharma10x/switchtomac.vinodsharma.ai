@@ -21,7 +21,17 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-6 text-[13px] text-muted">
-          <span>© 2026 Vinod Sharma</span>
+          <span>
+            A website by{" "}
+            <a
+              href="https://vinodsharma.ai/"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-2 hover:text-accent-ink"
+            >
+              Vinod Sharma
+            </a>
+          </span>
         </div>
       </div>
     </footer>
