@@ -1,15 +1,34 @@
 import type { Metadata } from "next";
 import { SITE } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
+import { aboutPageLd, personLd, breadcrumbLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "About",
   description:
     "A brand-new MacBook sat unused for two months. The story behind Switch, and why a clear Windows-to-Mac translation matters.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: `About ${SITE.name}`,
+    description:
+      "A brand-new MacBook sat unused for two months. The story behind Switch, and why a clear Windows-to-Mac translation matters.",
+    url: `${SITE.url}/about`,
+  },
 };
 
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-content px-5 py-12 sm:px-6 sm:py-16">
+      <JsonLd
+        data={[
+          aboutPageLd(),
+          personLd,
+          breadcrumbLd([
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+          ]),
+        ]}
+      />
       <div className="max-w-[720px]">
       <span className="font-mono text-[12.5px] uppercase tracking-[0.14em] text-muted">
         About

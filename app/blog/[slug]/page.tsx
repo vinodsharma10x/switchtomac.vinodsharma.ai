@@ -4,6 +4,9 @@ import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getPost, getAllSlugs, formatDate } from "@/lib/blog";
 import { mdxComponents } from "@/components/mdx-components";
+import JsonLd from "@/components/JsonLd";
+import { blogPostingLd, breadcrumbLd } from "@/lib/schema";
+import { SITE } from "@/lib/site";
 
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -12,10 +15,21 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const post = getPost(params.slug);
   if (!post) return {};
+  const path = `/blog/${params.slug}`;
   return {
     title: post.title,
     description: post.excerpt,
-    openGraph: { title: post.title, description: post.excerpt, type: "article" },
+    alternates: { canonical: path },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      url: `${SITE.url}${path}`,
+      publishedTime: post.date,
+      modifiedTime: post.date,
+      authors: [post.author || SITE.author.name],
+      tags: post.tags,
+    },
   };
 }
 
@@ -25,6 +39,16 @@ export default function PostPage({ params }: { params: { slug: string } }) {
 
   return (
     <article className="mx-auto max-w-[720px] px-5 py-12 sm:px-6 sm:py-16">
+      <JsonLd
+        data={[
+          blogPostingLd(post),
+          breadcrumbLd([
+            { name: "Home", path: "/" },
+            { name: "Blog", path: "/blog" },
+            { name: post.title, path: `/blog/${post.slug}` },
+          ]),
+        ]}
+      />
       <Link
         href="/blog"
         className="inline-flex items-center gap-1.5 font-mono text-[12.5px] text-muted hover:text-accent-ink"

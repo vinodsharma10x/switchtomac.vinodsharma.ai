@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts, formatDate } from "@/lib/blog";
+import JsonLd from "@/components/JsonLd";
+import { blogLd, breadcrumbLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Blog: tips for new Mac users",
   description:
     "Short, practical answers to the everyday Mac questions that come up after years on Windows.",
+  alternates: { canonical: "/blog" },
 };
 
 export default function BlogPage() {
@@ -13,6 +16,15 @@ export default function BlogPage() {
 
   return (
     <div className="mx-auto max-w-content px-5 py-12 sm:px-6 sm:py-16">
+      <JsonLd
+        data={[
+          blogLd(posts),
+          breadcrumbLd([
+            { name: "Home", path: "/" },
+            { name: "Blog", path: "/blog" },
+          ]),
+        ]}
+      />
       <header className="mb-8">
         <span className="font-mono text-[12.5px] uppercase tracking-[0.14em] text-muted">
           Blog

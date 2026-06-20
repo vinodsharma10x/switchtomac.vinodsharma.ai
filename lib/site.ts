@@ -14,6 +14,17 @@ export const SITE = {
   authors: "Vinod & Claude",
   // Current macOS at time of writing.
   macOS: "macOS Tahoe (macOS 26)",
+  // The person behind the site, used for metadata and structured data.
+  author: {
+    name: "Vinod Sharma",
+    url: "https://vinodsharma.ai",
+    twitter: "@VinodSharma10x",
+    sameAs: [
+      "https://vinodsharma.ai",
+      "https://x.com/VinodSharma10x",
+      "https://www.linkedin.com/in/vinodsharma10x/",
+    ],
+  },
 };
 
 export const NAV = [

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Videos: switching from Windows to Mac",
   description:
     "A short, curated set of video walkthroughs for people moving from Windows to a MacBook.",
+  alternates: { canonical: "/videos" },
 };
 
 export default function VideosPage() {

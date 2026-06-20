@@ -33,8 +33,25 @@ export const metadata: Metadata = {
     template: `%s · ${SITE.name}`,
   },
   description: SITE.description,
+  applicationName: SITE.name,
+  authors: [{ name: SITE.author.name, url: SITE.author.url }],
+  creator: SITE.author.name,
+  keywords: [
+    "Windows to Mac",
+    "Mac keyboard shortcuts",
+    "switch from Windows to MacBook",
+    "Windows shortcuts on Mac",
+    "macOS for Windows users",
+    "Finder vs File Explorer",
+    "Ctrl to Command",
+  ],
+  alternates: {
+    canonical: "/",
+    types: { "application/rss+xml": "/feed.xml" },
+  },
   openGraph: {
     type: "website",
+    locale: "en_US",
     siteName: SITE.name,
     title: `${SITE.name}: Windows to MacBook, made easy`,
     description: SITE.description,
@@ -42,8 +59,21 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: SITE.author.twitter,
+    creator: SITE.author.twitter,
     title: `${SITE.name}: Windows to MacBook, made easy`,
     description: SITE.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 

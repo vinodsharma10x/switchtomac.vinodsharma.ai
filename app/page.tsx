@@ -1,12 +1,20 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import ModifierPrimer from "@/components/ModifierPrimer";
 import ShortcutTable from "@/components/ShortcutTable";
 import GuidesGrid from "@/components/GuidesGrid";
+import JsonLd from "@/components/JsonLd";
 import { CATS, SHORTCUTS, TASKS } from "@/lib/shortcuts";
+import { websiteLd, personLd } from "@/lib/schema";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (
     <>
+      <JsonLd data={[websiteLd, personLd]} />
       <Hero />
       <ModifierPrimer />
 
