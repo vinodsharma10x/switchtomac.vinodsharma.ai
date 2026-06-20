@@ -15,8 +15,8 @@ export default function Home() {
           The shortcut cheat sheet
         </h2>
         <p className="mt-3 max-w-[60ch] text-[16px] text-ink-2">
-          Every Windows shortcut you use, side by side with its Mac equivalent. Filter by
-          category, or just search for what you want to do.
+          Every Windows shortcut you use, side by side with its Mac equivalent. You can
+          filter them by category, or just search for what you want to do.
         </p>
         <div className="mt-8">
           <ShortcutTable cats={CATS} shortcuts={SHORTCUTS} />
