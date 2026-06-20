@@ -29,20 +29,20 @@ const mono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} — Windows to MacBook, made easy`,
+    default: `${SITE.name}: Windows to MacBook, made easy`,
     template: `%s · ${SITE.name}`,
   },
   description: SITE.description,
   openGraph: {
     type: "website",
     siteName: SITE.name,
-    title: `${SITE.name} — Windows to MacBook, made easy`,
+    title: `${SITE.name}: Windows to MacBook, made easy`,
     description: SITE.description,
     url: SITE.url,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.name} — Windows to MacBook, made easy`,
+    title: `${SITE.name}: Windows to MacBook, made easy`,
     description: SITE.description,
   },
 };

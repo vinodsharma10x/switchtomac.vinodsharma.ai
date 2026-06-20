@@ -6,7 +6,7 @@ export const SITE = {
   name: "Switch",
   tagline: "From Windows to Mac, without the friction.",
   description:
-    "A friendly, searchable guide for moving from Windows to a MacBook — keyboard shortcut translations, how-to guides, videos, and more. Open source.",
+    "A friendly, searchable guide for moving from Windows to a MacBook: keyboard shortcut translations, how-to guides, videos, and more. Open source.",
   // Change this to your real domain once it's connected on Vercel.
   url: "https://switchtomac.vinodsharma.ai",
   // Change this to your GitHub repo (or remove the link in Header/Footer).
@@ -18,7 +18,6 @@ export const SITE = {
 
 export const NAV = [
   { href: "/", label: "Home" },
-  { href: "/shortcuts", label: "Reference" },
   { href: "/blog", label: "Blog" },
   { href: "/videos", label: "Videos" },
   { href: "/about", label: "About" },

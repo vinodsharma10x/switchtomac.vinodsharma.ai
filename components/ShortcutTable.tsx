@@ -68,7 +68,7 @@ export default function ShortcutTable({
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search — try “screenshot”, “rename”, “lock”…"
+          placeholder="Search: try “screenshot”, “rename”, “lock”…"
           aria-label="Search shortcuts"
           className="h-11 w-full rounded-xl border border-line-2 bg-surface pl-10 pr-4 text-[14.5px] outline-none transition-shadow focus:border-accent focus:shadow-[0_0_0_4px_rgba(47,107,255,0.18)]"
         />

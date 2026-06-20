@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import ModifierPrimer from "@/components/ModifierPrimer";
+import ShortcutTable from "@/components/ShortcutTable";
 import GuidesGrid from "@/components/GuidesGrid";
-import { SHORTCUTS, TASKS } from "@/lib/shortcuts";
+import { CATS, SHORTCUTS, TASKS } from "@/lib/shortcuts";
 import { getAllPosts } from "@/lib/blog";
 import { VIDEOS } from "@/lib/videos";
 
@@ -19,12 +20,6 @@ export default function Home() {
   const posts = getAllPosts();
 
   const cards = [
-    {
-      href: "/shortcuts",
-      title: "The full reference",
-      desc: "Every Windows shortcut, translated to its Mac equivalent. Searchable and grouped by what you're doing.",
-      meta: `${SHORTCUTS.length} shortcuts`,
-    },
     {
       href: "/blog",
       title: "Articles",
@@ -44,16 +39,29 @@ export default function Home() {
       <Hero />
       <ModifierPrimer />
 
-      <section className="mx-auto max-w-content px-5 pb-16 sm:px-6">
+      <section id="reference" className="mx-auto max-w-content px-5 pb-16 sm:px-6">
         <span className="font-mono text-[12.5px] uppercase tracking-[0.14em] text-muted">
-          Guides
+          Reference
         </span>
         <h2 className="mt-2 font-display text-[clamp(28px,4.5vw,40px)] font-bold tracking-[-0.025em]">
+          The full translation
+        </h2>
+        <p className="mt-3 max-w-[60ch] text-[16px] text-ink-2">
+          Every shortcut you reach for, side by side. Filter by category, or just search
+          for what you want to do.
+        </p>
+        <div className="mt-8">
+          <ShortcutTable cats={CATS} shortcuts={SHORTCUTS} />
+        </div>
+      </section>
+
+      <section id="guides" className="mx-auto max-w-content px-5 pb-16 sm:px-6">
+        <h2 className="font-display text-[clamp(28px,4.5vw,40px)] font-bold tracking-[-0.025em]">
           How to do the everyday things
         </h2>
         <p className="mt-3 max-w-[60ch] text-[16px] text-ink-2">
-          The actions that don't map to a single key — right-clicking, recording your
-          screen, finding where a download went.
+          The actions that don't map to a single key, like right-clicking, recording your
+          screen, or finding where a download went.
         </p>
         <div className="mt-8">
           <GuidesGrid tasks={TASKS} />

@@ -18,7 +18,7 @@ export default function NotFound() {
         <Link href="/" className="rounded-xl bg-ink px-5 py-3 text-[14.5px] font-semibold text-white transition-transform hover:-translate-y-0.5">
           Back home
         </Link>
-        <Link href="/shortcuts" className="rounded-xl border border-line-2 bg-surface px-5 py-3 text-[14.5px] font-semibold text-ink-2 transition-colors hover:border-accent hover:text-accent-ink">
+        <Link href="/#reference" className="rounded-xl border border-line-2 bg-surface px-5 py-3 text-[14.5px] font-semibold text-ink-2 transition-colors hover:border-accent hover:text-accent-ink">
           Open the reference
         </Link>
       </div>

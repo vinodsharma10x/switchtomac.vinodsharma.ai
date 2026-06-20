@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getAllPosts, formatDate } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog — tips for new Mac users",
+  title: "Blog: tips for new Mac users",
   description:
     "Longer reads and practical tips for getting comfortable on macOS after years on Windows.",
 };
@@ -21,14 +21,14 @@ export default function BlogPage() {
           Reads &amp; tips
         </h1>
         <p className="mt-3 max-w-[60ch] text-[16px] text-ink-2">
-          Longer pieces on getting comfortable with macOS — written for people coming from
+          Longer pieces on getting comfortable with macOS, written for people coming from
           Windows.
         </p>
       </header>
 
       {posts.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-line-2 bg-surface p-9 text-center text-[15px] text-muted">
-          No posts yet — add an <code className="font-mono text-ink">.mdx</code> file in{" "}
+          No posts yet. Add an <code className="font-mono text-ink">.mdx</code> file in{" "}
           <code className="font-mono text-ink">content/blog</code>.
         </div>
       ) : (

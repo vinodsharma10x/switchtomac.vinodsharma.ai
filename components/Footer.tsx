@@ -15,7 +15,7 @@ export default function Footer() {
             </span>
           </div>
           <p className="mt-3 max-w-[40ch] text-[13.5px] text-muted">
-            {SITE.tagline} Made for everyone making the switch — and open source under
+            {SITE.tagline} Made for everyone making the switch, and open source under
             the MIT License.
           </p>
         </div>

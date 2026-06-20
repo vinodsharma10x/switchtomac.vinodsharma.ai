@@ -26,7 +26,7 @@ export default function VideosPage() {
 
       {VIDEOS.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-line-2 bg-surface p-9 text-center text-[15px] text-muted">
-          No videos yet — add some in <code className="font-mono text-ink">lib/videos.ts</code>.
+          No videos yet. Add some in <code className="font-mono text-ink">lib/videos.ts</code>.
         </div>
       ) : (
         <div className="grid gap-6 sm:grid-cols-2">

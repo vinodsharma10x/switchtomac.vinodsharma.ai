@@ -17,7 +17,7 @@ export default function ModifierPrimer() {
         Three keys, and you're 90% there.
       </h2>
       <p className="mt-2 max-w-[62ch] text-[15.5px] text-muted">
-        Mac and Windows keyboards have the same modifier keys — they just wear different
+        Mac and Windows keyboards have the same modifier keys; they just wear different
         names. Learn these three swaps and most shortcuts fall into place.
       </p>
 
@@ -39,8 +39,8 @@ export default function ModifierPrimer() {
 
       <div className="mt-4 rounded-xl border border-line bg-bg-soft px-4 py-3.5 text-[13.5px] text-ink-2">
         <b className="text-ink">One thing to know:</b> Macs <i>do</i> have their own{" "}
-        <span className="kbd gl">⌃</span> Control key. You'll meet it now and then —
-        right-clicking, opening Mission Control — but day to day,{" "}
+        <span className="kbd gl">⌃</span> Control key. You'll meet it now and then
+        (right-clicking, opening Mission Control), but day to day,{" "}
         <b className="text-ink">Command (⌘)</b> is the one your thumb wants.
       </div>
     </section>

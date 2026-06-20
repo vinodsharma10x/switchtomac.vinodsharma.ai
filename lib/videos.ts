@@ -12,7 +12,7 @@ export const VIDEOS: Video[] = [
   {
     id: "Rzwz1E1eyGk",
     title: "Switching from Windows to Mac? Everything You Need to Know",
-    note: "A fast, friendly tour of 20+ things that work differently — a great first watch.",
+    note: "A fast, friendly tour of 20+ things that work differently. A great first watch.",
   },
   {
     id: "9mDK3C2em7M",
@@ -21,12 +21,12 @@ export const VIDEOS: Video[] = [
   },
   {
     id: "BsCpxO3xdX0",
-    title: "Windows vs macOS — Side-by-Side, the Top Things to Know",
+    title: "Windows vs macOS: Side-by-Side, the Top Things to Know",
     note: "Direct comparisons of the most common day-to-day differences.",
   },
   {
     id: "67keaaWOKzE",
-    title: "Mac Tutorial for Beginners — Switching from Windows",
+    title: "Mac Tutorial for Beginners: Switching from Windows",
     note: "Covers the fundamentals end to end if you like to learn from the ground up.",
   },
 ];

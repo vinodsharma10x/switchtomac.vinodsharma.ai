@@ -41,7 +41,7 @@ export default function Hero() {
   return (
     <section className="mx-auto max-w-content px-5 pt-16 sm:px-6 sm:pt-20">
       <span className="inline-flex items-center gap-2.5 font-mono text-[12.5px] uppercase tracking-[0.16em] text-muted">
-        Windows <span className="font-semibold text-accent">→</span> macOS
+        Windows <span className="font-semibold text-accent">→</span> Mac
       </span>
 
       <h1 className="mt-4 max-w-[16ch] font-display text-[clamp(34px,6vw,56px)] font-bold leading-[1.04] tracking-[-0.025em]">
@@ -49,10 +49,10 @@ export default function Hero() {
       </h1>
 
       <p className="mt-4 max-w-[60ch] text-[clamp(16px,2.2vw,19px)] text-ink-2">
-        Almost every Windows shortcut works on a MacBook — you just press{" "}
+        Almost every Windows shortcut works on a MacBook. You just press{" "}
         <b className="font-semibold text-ink">⌘ Command</b> where you used to press{" "}
         <b className="font-semibold text-ink">Ctrl</b>. Here's the whole translation, plus
-        how to do the everyday things, the videos worth watching, and more.
+        how to do the everyday things.
       </p>
 
       {/* Signature translator */}
