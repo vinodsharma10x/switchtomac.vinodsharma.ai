@@ -10,7 +10,7 @@ export const SITE = {
   // Change this to your real domain once it's connected on Vercel.
   url: "https://switchtomac.app",
   // Change this to your GitHub repo (or remove the link in Header/Footer).
-  repo: "https://github.com/vinodsharma10x/switchtomac.vinodsharma.ai",
+  repo: "https://github.com/vinodsharma10x/switchtomac-app",
   authors: "Vinod & Claude",
   // Current macOS at time of writing.
   macOS: "macOS Tahoe (macOS 26)",

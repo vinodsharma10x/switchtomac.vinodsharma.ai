@@ -31,8 +31,8 @@ All shortcut and guide data is verified against Apple's documentation for **macO
 ## Getting started
 
 ```bash
-git clone https://github.com/vinodsharma10x/switchtomac.vinodsharma.ai.git
-cd switchtomac.vinodsharma.ai
+git clone https://github.com/vinodsharma10x/switchtomac-app.git
+cd switchtomac-app
 npm install
 npm run dev          # http://localhost:3000
 ```
