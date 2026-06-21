@@ -1,10 +1,17 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { SITE } from "@/lib/site";
 
 export default function Footer() {
+  // The story repeats the About page, so skip it there (and its self-link).
+  const isAbout = usePathname() === "/about";
+
   return (
     <footer className="mt-12 border-t border-line">
       <div className="mx-auto max-w-content px-5 py-12 sm:px-6">
+        {!isAbout && (
         <div>
           <div className="flex items-center gap-2.5">
             <span className="grid h-[28px] w-[28px] place-items-center rounded-lg border border-line-2 bg-gradient-to-b from-white to-[#eef1f7] font-mono text-[15px] text-accent-ink shadow-[0_1px_0_#c7cdd7,inset_0_1px_0_#fff] dark:from-[#262c36] dark:to-[#1b2028] dark:shadow-[0_1px_0_#0f1318,inset_0_1px_0_rgba(255,255,255,0.05)]">
@@ -35,8 +42,13 @@ export default function Footer() {
             </svg>
           </Link>
         </div>
+        )}
 
-        <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-6 text-[13px] text-muted">
+        <div
+          className={`flex flex-wrap items-center justify-between gap-3 text-[13px] text-muted${
+            isAbout ? "" : " mt-10 border-t border-line pt-6"
+          }`}
+        >
           <span>
             A website by{" "}
             <a
