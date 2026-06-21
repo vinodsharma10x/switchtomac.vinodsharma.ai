@@ -17,12 +17,12 @@ export default function Footer() {
           </div>
           <p className="mt-4 text-[13.5px] leading-relaxed text-muted">
             My teammate Jimmy got a brand-new MacBook. M5 Pro chip, 48GB of RAM. One of the
-            fastest laptops you can buy. For two months, he didn't touch it, and kept working
-            on his old Windows laptop instead. He said, "Mac is better as a paperweight."
-            Jimmy is not alone. I made the same switch ten years ago, and it was painful.
-            Every app and every keyboard shortcut worked differently, and I had to relearn all
-            of it. So I built this, for Jimmy and everyone making the same move: from the
-            world's best business laptop to the most advanced coding machine.
+            fastest laptops you can buy. For two months, he didn't switch to it, and kept
+            working on his old Windows laptop instead. He said, "Mac is better as a
+            paperweight." I made the same switch ten years ago, and it was painful. Every app
+            and every keyboard shortcut worked differently, and I had to relearn all of it. It
+            was worth it. So I built this, for Jimmy and everyone making the same move: from
+            the world's best business laptop to the most advanced coding machine.
           </p>
           <Link
             href="/about"
