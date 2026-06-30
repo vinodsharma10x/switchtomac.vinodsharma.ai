@@ -17,6 +17,8 @@ export interface Post {
   author?: string;
   tags?: string[];
   faq?: FaqItem[];
+  cover?: string;
+  coverAlt?: string;
   content: string;
 }
 
@@ -41,6 +43,8 @@ export function getPost(slug: string): Post | null {
     author: data.author,
     tags: data.tags ?? [],
     faq: Array.isArray(data.faq) ? data.faq : undefined,
+    cover: data.cover,
+    coverAlt: data.coverAlt,
     content,
   };
 }

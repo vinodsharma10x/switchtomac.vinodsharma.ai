@@ -82,6 +82,15 @@ export default function PostPage({ params }: { params: { slug: string } }) {
         )}
       </header>
 
+      {post.cover && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={post.cover}
+          alt={post.coverAlt || post.title}
+          className="mt-8 w-full rounded-2xl border border-line"
+        />
+      )}
+
       <div className="mt-2">
         <MDXRemote
           source={post.content}
