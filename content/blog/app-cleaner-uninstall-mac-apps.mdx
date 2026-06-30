@@ -1,0 +1,62 @@
+---
+title: "On a Mac, dragging an app to the Trash does not really uninstall it"
+date: "2026-06-21"
+excerpt: "Dragging a Mac app to the Trash leaves files behind. How to fully uninstall it and reclaim the space with the free AppCleaner."
+author: "Vinod Sharma"
+tags: ["setup"]
+---
+
+You can drag an app to the Trash and still not have uninstalled it.
+
+A Mac app installs as a single bundle, the icon you drag into Applications. But as you use it, it leaves small files scattered across your system:
+
+- Preferences
+- Caches
+- Application support files
+- Logs
+- Sometimes a login item that keeps running in the background
+
+Drag the app to the Trash, and all of that stays behind in hidden Library folders you never open.
+
+One app is nothing. Years of installing and removing apps is gigabytes of files for software you do not even have anymore.
+
+## The leftovers add up fast
+
+On a small drive, this is not a rounding error.
+
+For most of the last ten years, my main machines were a Mac mini and an office Mac, both on a 512GB drive. It filled up fast. I am on 1TB now and still clean regularly, because it pays off every time the disk gets tight.
+
+Two tools do the work. One finds the space. One removes apps cleanly.
+
+## AppCleaner removes the whole app, not just the icon
+
+[AppCleaner](https://freemacsoft.net/appcleaner/) is the cleanest uninstaller I have found, and it is free.
+
+Drag an app onto its window, it finds every related file, and you delete them together in one click.
+
+Here is the whole process:
+
+- Download AppCleaner from [freemacsoft.net](https://freemacsoft.net/appcleaner/). It is free.
+- Drag the app from Applications onto the AppCleaner window.
+- It lists the app plus every file it found: preferences, caches, support files, login items.
+- Glance at the list, click Remove, then empty the Trash.
+
+Two things make it safe and effortless:
+
+- **It protects the built-in Apple apps**, so you will not delete something the system needs by accident.
+- **Turn on SmartDelete** in its preferences, and it catches any app you drag to the Trash the normal way, then offers to clean up the leftovers.
+
+That is the thorough uninstall, without even opening it.
+
+## Pair it with DaisyDisk to reclaim space
+
+AppCleaner removes apps, and DaisyDisk tells you which ones to remove.
+
+DaisyDisk scans your drive in seconds and shows what is eating the space as a visual map. When the disk gets tight, my routine is two steps:
+
+- Scan with DaisyDisk to see where the space went.
+- Remove the apps I no longer use with AppCleaner, so they leave nothing behind.
+
+Five minutes, and I get the space back instead of buying a bigger drive.
+
+More on that tool in its own post: [DaisyDisk](/blog/daisydisk-free-up-mac-space).
