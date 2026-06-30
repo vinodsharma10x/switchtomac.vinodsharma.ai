@@ -1,7 +1,9 @@
 import { ImageResponse } from "next/og";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { getPost, getAllSlugs } from "@/lib/blog";
 
-export const alt = "Switch — Windows to Mac";
+export const alt = "Switch, Windows to Mac";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -9,10 +11,28 @@ export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
 }
 
-// Per-post social share card. Rendered at build, used only as the link
-// preview image. It never appears inside the post.
+// Per-post social share image. If the post has a cover banner, that becomes
+// the share image. Otherwise a generated card with the title. Never shown
+// inside the post.
 export default function Image({ params }: { params: { slug: string } }) {
   const post = getPost(params.slug);
+
+  if (post?.cover) {
+    const file = readFileSync(join(process.cwd(), "public", post.cover));
+    const mime = post.cover.endsWith(".png") ? "image/png" : "image/jpeg";
+    return new ImageResponse(
+      (
+        <img
+          src={`data:${mime};base64,${file.toString("base64")}`}
+          width={size.width}
+          height={size.height}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
+      ),
+      { ...size }
+    );
+  }
+
   const title = post?.title ?? "Switch";
 
   return new ImageResponse(
